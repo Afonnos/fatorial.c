@@ -1,0 +1,24 @@
+name: C/C++ Fatorial CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Compilar o Programa de Teste
+      run: |
+        # Compila os dois arquivos .c juntos, criando um executável chamado 'test_fatorial'
+        gcc fatorial_test.c fatorial.c -o test_fatorial -Wall -Wextra
+
+    - name: Executar Testes
+      run: |
+        # Executa o binário de teste. Se houver falha, ele retornará EXIT_FAILURE e a Action falhará.
+        ./test_fatorial
