@@ -1,17 +1,12 @@
+#include <assert.h> 
 int main() {
-    int erros = 0;
 
-    if (fatorial(0) != 1) erros++;
-    if (fatorial(1) != 1) erros++;
-    if (fatorial(5) != 120) erros++;
-    if (fatorial(6) != 720) erros++;
-    if (fatorial(-2) != -1) erros++;
-
-    if (erros == 0) {
-        printf("Todos os testes passaram!\n");
-        return 0;
-    } else {
-        printf("Falharam %d testes.\n", erros);
-        return 1;
-    }
+    assert (fatorial(0) == 1) ;
+    assert (fatorial(1) == 1) ;
+    assert (fatorial(5) == 120); 
+    assert (fatorial(6) == 720) ;
+    assert (fatorial(-2) == -1) ;
+    
+    printf("Todos os testes passaram!\n");
+    return: 0;    
 }
