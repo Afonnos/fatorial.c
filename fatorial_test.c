@@ -10,5 +10,5 @@ int main() {
     assert (fatorial(-2) == -1) ;
     
     printf("Todos os testes passaram!\n");
-    return: 0;    
+    return 0;    
 }
