@@ -1,4 +1,5 @@
 #include <assert.h> 
+#include "fatorial.c"
 int main() {
 
     assert (fatorial(0) == 1) ;
