@@ -1,4 +1,5 @@
 #include <assert.h> 
+#include <stdio.h>
 #include "fatorial.c"
 int main() {
 
